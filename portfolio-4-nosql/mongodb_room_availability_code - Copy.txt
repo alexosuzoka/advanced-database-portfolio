@@ -1,0 +1,28 @@
+[
+  {
+    '$match': {
+      'availability_status': 'Available'
+    }
+  }, {
+    '$lookup': {
+      'from': 'room_types', 
+      'localField': 'room_type_id', 
+      'foreignField': 'room_type_id', 
+      'as': 'room_availability_result'
+    }
+  }, {
+    '$unwind': {
+      'path': '$room_availability_result', 
+      'preserveNullAndEmptyArrays': false
+    }
+  }, {
+    '$project': {
+      '_id': 0, 
+      'room_id': 1, 
+      'availability_status': 1, 
+      'type_name': '$room_availability_result.type_name', 
+      'num_available_rooms': '$room_availability_result.num_available_rooms', 
+      'room_price': '$room_availability_result.room_price'
+    }
+  }
+]
