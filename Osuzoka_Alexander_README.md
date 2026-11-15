@@ -36,7 +36,7 @@ Repository Structure
 
 Hotel Description
 
-Parkview Astoria Hotel (PAH) is the fictional hospitality establishment used as the case study for this database project.
+Parkview Astoria Hotel (PAH) is a 5 star hospitality establishment situated in Parkview estate at Ikoyi Lagos. The Hote is used as the case study for this database project.
 
 The hotel reservation system is designed to manage its operational data efficiently and maintain accurate relationships between guests, room types, individual rooms, payments, and bookings.
 
@@ -66,43 +66,25 @@ Hotel Room Suites
 
 Parkview Astoria Hotel offers five room categories in the database.
 
-Room Type ID
-
-Room/Suite Category
-
-Price per Night
-
 DS
 
 Deluxe Suite
-
-₦100,000
 
 LDS
 
 Luxury Deluxe Suite
 
-₦150,000
-
 ES
 
 Executive Suite
-
-₦200,000
 
 DIS
 
 Diplomatic Suite
 
-₦250,000
-
 TB
 
 Twin Bed
-
-₦50,000
-
-The room prices above reflect the sample data used in the transaction and concurrency portfolio.
 
 1. Deluxe Suite (DS)
 
@@ -218,29 +200,6 @@ SQL Script
 
 Description
 
-insert_room_types.sql
-
-Inserts five room categories, their prices, total room counts, and initial availability statistics.
-
-insert_rooms.sql
-
-Inserts sample rooms and assigns room types and availability statuses.
-
-insert_room_payments.sql
-
-Inserts sample guest payments, payment methods, amounts, and payment statuses.
-
-select_rooms.sql
-
-Retrieves room records from the rooms table.
-
-select_room_payments.sql
-
-Retrieves records from the room payments table.
-
-retrieve_new_users.sql
-
-Retrieves newly registered guest records.
 
 query_room_availability.sql
 
@@ -611,9 +570,6 @@ advanced-database-portfolio/
 │   └── Screenshot_ER_Diagram_Objects.png
 │
 ├── portfolio-2-query-optimization/
-│   ├── insert_room_types.sql
-│   ├── insert_rooms.sql
-│   ├── insert_room_payments.sql
 │   ├── select_rooms.sql
 │   ├── select_room_payments.sql
 │   ├── retrieve_new_users.sql
@@ -625,10 +581,11 @@ advanced-database-portfolio/
 ├── portfolio-3-transaction-concurrency/
 │   ├── query_trans_commit_insert_objects.sql
 │   └── Screenshot_query_booking_status_with_isolation_levels.png
+|   ├── query_trans_commit_insert_objects.sql
 │
 ├── portfolio-4-nosql/
 │   ├── mongo_db_booking_status.js
-│   ├── mongodb_room_availability_code.txt
+│   ├── ADS0 Data _ Cloud_ MongoDB Cloud_room_availability_checker_result.pdf
 │   ├── mongodb_room_availability_code_through_aggregration.json
 │   ├── Screenshot_mongodb_account_created.png
 │   └── Videos of room_availability and query_booking_status(Mongodb)/
